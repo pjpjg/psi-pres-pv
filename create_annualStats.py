@@ -85,11 +85,10 @@ for season in seasons:
         if row_exists:
             new_row = [player_id, 0, season, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
             playerSeason_df.loc[len(playerSeason_df)] = new_row
-            count += 1
         else:
-            count += 1
             pass
-        print((count/total)*100)
+        count += 1
+        print((count / total) * 100)
 
 # think about issues if people transfer in January
 total = len(playerSeason_df)

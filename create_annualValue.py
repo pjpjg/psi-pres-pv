@@ -23,9 +23,13 @@ values_df['year'] = values_df['date'].dt.year
 values_df['date'] = pd.to_datetime(values_df['date'])
 
 # calculate the difference in days from June 30th of the row's year
+total = len(values_df)
+count = 0
 for index, row in values_df.iterrows():
     delta = int(abs((row['date'] - datetime(row['year'], 6, 30, 0, 0, 0)).days))
     values_df.at[index, 'delta'] = delta
+    count += 1
+    print((count/total)*100)
 
 # sort df on 'player_id', 'year', 'delta'
 values_df = values_df.sort_values(by=['player_id', 'year', 'delta'])
