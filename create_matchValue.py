@@ -6,16 +6,6 @@ playerValues_df = pd.read_csv('created-data/annual_values.csv')
 playerpool_df = pd.read_csv('created-data/playerpool.csv')
 comps_df = pd.read_csv('transfermarkt-data/competitions.csv')
 
-'''
-apps_df = 'appearance_id', 'game_id', 'player_id', 'player_club_id', 'player_current_club_id', 'date', 'player_name', 
-    'competition_id', 'yellow_cards', 'red_cards', 'goals', 'assists', 'minutes_played'
-       
-games_df = 'game_id', 'competition_id', 'season', 'round', 'date', 'home_club_id', 'away_club_id', 'home_club_goals', 
-    'away_club_goals',
-
-playerValues_df = 'player_id', 'year', 'market_value_in_eur'
-'''
-
 # get leagues and player_ids
 LEAGUES = ['premier-league', 'laliga', 'ligue-1', 'serie-a', 'bundesliga']
 player_ids = playerpool_df['player_id'].to_list()
